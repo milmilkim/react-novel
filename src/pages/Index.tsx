@@ -7,7 +7,7 @@ const Index = () => {
   };
   return (
     <>
-      <h1>샘플!</h1>
+      <h1>TEST</h1>
       <button onClick={start}>click</button>
     </>
   );
