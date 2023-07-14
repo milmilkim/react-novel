@@ -24,13 +24,11 @@ const Contents = () => {
         throw new Error('파일을 불러오지 못했습니다');
       }
 
-      const base = import.meta.env.PROD ? `${APP.GITHUB_REPO_NAME}` : '';
+      const base = import.meta.env.DEV ? '' : `${APP.GITHUB_REPO_NAME}`;
       const text = await res.text();
-      const html = text.replace(/\/images\//g, `${base}/files/images/`);
+      const html = text.replace(/\/images\//g, `/${base}/files/images/`);
 
       setHtml(html);
-
-      console.log(html);
     } catch (err) {
       console.log(err);
       chapter.goSpecificChapter(1);
