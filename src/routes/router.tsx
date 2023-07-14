@@ -3,20 +3,24 @@ import Index from '@/pages/Index';
 import { route } from '@/@types/route';
 import Contents from '@/pages/Contents';
 import Credit from '@/pages/Credit';
+import {APP} from '../../config'
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Index />,
-  },
-  {
-    path: `${route.Contents}/:id?`,
-    element: <Contents />,
-  },
-  {
-    path: route.Credit,
-    element: <Credit />,
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <Index />,
+    },
+    {
+      path: `${route.Contents}/:id?`,
+      element: <Contents />,
+    },
+    {
+      path: route.Credit,
+      element: <Credit />,
+    },
+  ],
+  { basename: import.meta.env.DEV ? '/' : `${APP.GITHUB_REPO_NAME}` }
+);
 
 export default router;
