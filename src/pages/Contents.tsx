@@ -25,7 +25,7 @@ const Contents = () => {
       }
 
       const base = import.meta.env.DEV ? '' : `${APP.GITHUB_REPO_NAME}`;
-      console.log(base)
+      console.log(import.meta.env.DEV);
       const text = await res.text();
       const html = text.replace(/\/images\//g, `/${base}/files/images/`);
 
