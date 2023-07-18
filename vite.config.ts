@@ -3,11 +3,13 @@ import react from '@vitejs/plugin-react-swc';
 import { VitePWA } from 'vite-plugin-pwa';
 import { manifest } from './src/assets/manifest';
 import tsconfigPaths from 'vite-tsconfig-paths';
-import { APP } from './config';
+import CONFIG from './novel.config.json';
 // https://vitejs.dev/config/
 export default defineConfig({
   base:
-    process.env.NODE_ENV === 'production' ? `/${APP.GITHUB_REPO_NAME}/` : '/',
+    process.env.NODE_ENV === 'production'
+      ? `/${CONFIG.APP.GITHUB_REPO_NAME}/`
+      : '/',
   plugins: [
     react(),
     tsconfigPaths(),

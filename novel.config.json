@@ -1,0 +1,24 @@
+{
+  "STYLE": {
+    "PRIMARY_COLOR": "#ff3272ff",
+    "BACKGROUND_COLOR": "#f8f5f3"
+  },
+  "PWA": {
+    "APP_NAME": "YOUR APP",
+    "APP_SHORT_NAME": "APP",
+    "APP_THEME_COLOR": "#ff3272ff",
+    "APP_BACKGROUND_COLOR": "#f8f5f3",
+    "DESCRIPTION": "DESCRIPTION"
+  },
+  "META": {
+    "TITLE": "YOUR APP",
+    "THEME_COLOR": "#ff3272ff"
+  },
+  "PAGE": {
+    "CHAPTER_COUNT": 5,
+    "PREFIX": "ch"
+  },
+  "APP": {
+    "GITHUB_REPO_NAME": "react-novel"
+  }
+}

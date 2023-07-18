@@ -1,5 +1,5 @@
 import { Helmet as AsyncHelmet } from 'react-helmet-async';
-import { META } from '../../../config';
+import { META } from '../../../novel.config.json';
 const Helmet = () => {
   return (
     <AsyncHelmet>

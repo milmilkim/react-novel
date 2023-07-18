@@ -3,7 +3,7 @@ import Index from '@/pages/Index';
 import { route } from '@/@types/route';
 import Contents from '@/pages/Contents';
 import Credit from '@/pages/Credit';
-import { APP } from '../../config';
+import { APP } from '../../novel.config';
 
 const router = createBrowserRouter(
   [

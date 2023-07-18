@@ -1,4 +1,4 @@
-import { STYLE } from '../../config';
+import { STYLE } from '../../novel.config.json';
 
 export const defaultTheme = {
   colors: {

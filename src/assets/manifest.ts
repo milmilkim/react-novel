@@ -1,4 +1,4 @@
-import {PWA} from '../../config'
+import {PWA} from '../../novel.config.json'
 
 export const manifest = {
   name: PWA.APP_NAME,

@@ -1,7 +1,7 @@
 import useChapter from '@/hooks/useChapter';
 import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { PAGE, APP } from '../../config';
+import { PAGE, APP } from '../../novel.config.json';
 import { route } from '@/@types/route';
 import { useState } from 'react';
 
@@ -31,7 +31,7 @@ const Contents = () => {
 
       setHtml(html);
     } catch (err) {
-      console.log(err);
+      console.error(err);
       chapter.goSpecificChapter(1);
     }
   };
@@ -56,7 +56,7 @@ const Contents = () => {
     <>
       <h1>container</h1>
       <div dangerouslySetInnerHTML={createMarkup()}></div>
-      {Number(id?.replace(PAGE.PREFIX, '')) < PAGE.CAHPTER_COUNT ? (
+      {Number(id?.replace(PAGE.PREFIX, '')) < PAGE.CHAPTER_COUNT ? (
         <button onClick={next}>다음으로</button>
       ) : (
         <button onClick={goCredit}>credit</button>
