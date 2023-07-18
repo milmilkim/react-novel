@@ -16,7 +16,7 @@ const Contents = () => {
     try {
       if (!id) throw new Error('id가 존재하지 않습니다');
 
-      const base = import.meta.env.DEV ? '/' : `/${APP.GITHUB_REPO_NAME}`;
+      const base = import.meta.env.DEV ? '..' : `/${APP.GITHUB_REPO_NAME}`;
 
       const idNumber = id.replace(PAGE.PREFIX, '');
 
@@ -27,7 +27,7 @@ const Contents = () => {
       }
 
       const text = await res.text();
-      const html = text.replace(/\/images\//g, `${base}/files/images/`);
+      const html = text.replace(/\.\//g, `${base}/files/`);
 
       setHtml(html);
     } catch (err) {
